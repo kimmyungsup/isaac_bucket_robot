@@ -1,0 +1,66 @@
+# Local Python and Isaac Sim environments
+.venv/
+venv/
+env/
+.python-version
+
+# Archived and development backup material
+old/
+legacy/
+*.orig
+*.rej
+*.bak
+*.backup
+*.zip
+
+# Python caches and test artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated logs and temporary output
+*.log
+*.tmp
+*.temp
+*.dmp
+*.pid
+*.swp
+*.swo
+*~
+
+# Isaac Sim / Omniverse local caches and generated data
+.cache/
+cache/
+.thumbs/
+logs/
+outputs/
+captures/
+screenshots/
+omniverse-cache/
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+humanoid_urdf_assemble/build/
+humanoid_urdf_assemble/devel/
+humanoid_urdf_assemble/install/
+
+# IDE and operating-system metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+gptapi.txt
+*.pem
+*.key

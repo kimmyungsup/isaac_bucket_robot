@@ -1,0 +1,191 @@
+{
+  "format_version": 1,
+  "source_urdf": "humanoid_urdf_assemble/urdf/combined_mobile_v4_onlyarm_wheels.urdf",
+  "chain": {
+    "base_link": "base_mobile",
+    "end_link": "body8_mobile",
+    "joints": [
+      {
+        "name": "joint1_mobile",
+        "parent": "base_mobile",
+        "child": "body1_mobile",
+        "origin_xyz": [
+          0.0,
+          -0.146,
+          0.0
+        ],
+        "origin_rpy": [
+          0.0,
+          -1.5708,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "name": "joint2_mobile",
+        "parent": "body1_mobile",
+        "child": "body2_mobile",
+        "origin_xyz": [
+          0.0,
+          0.71467,
+          1.4217
+        ],
+        "origin_rpy": [
+          -3.0631,
+          0.0,
+          -3.1416
+        ],
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "joint3_mobile",
+        "parent": "body2_mobile",
+        "child": "body3_mobile",
+        "origin_xyz": [
+          0.0,
+          -3.0827e-05,
+          3.6492
+        ],
+        "origin_rpy": [
+          -1.5708,
+          1.4923,
+          -1.5708
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "name": "joint4_mobile",
+        "parent": "body3_mobile",
+        "child": "body4_mobile",
+        "origin_xyz": [
+          -0.32402,
+          0.67267,
+          0.0
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          -0.063879
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "name": "joint5_mobile",
+        "parent": "body4_mobile",
+        "child": "body5_mobile",
+        "origin_xyz": [
+          7.4983,
+          0.033857,
+          0.0
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          0.16947
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "name": "joint6_mobile",
+        "parent": "body5_mobile",
+        "child": "body6_mobile",
+        "origin_xyz": [
+          0.20463,
+          0.14401,
+          0.0
+        ],
+        "origin_rpy": [
+          0.0,
+          0.0,
+          -0.79343
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "name": "joint7_mobile",
+        "parent": "body6_mobile",
+        "child": "body7_mobile",
+        "origin_xyz": [
+          1.72,
+          -0.019163,
+          0.0
+        ],
+        "origin_rpy": [
+          2.7295,
+          1.5708,
+          0.0
+        ],
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "joint8_mobile",
+        "parent": "body7_mobile",
+        "child": "body8_mobile",
+        "origin_xyz": [
+          0.0,
+          -0.25367,
+          0.01
+        ],
+        "origin_rpy": [
+          1.5708,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "control": {
+    "translation_speed_mps": 0.16,
+    "turn_speed_rps": 0.22,
+    "joint2_lift_assist_rad_per_m": 2.0,
+    "joint2_forward_assist_rad_per_m": 0.8,
+    "orientation_hold_gain": 0.35,
+    "orientation_task_weight": 1.5,
+    "joint_motion_cost": [
+      1.0,
+      0.08,
+      1.0,
+      1.0,
+      0.55,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "damped_least_squares": 0.12,
+    "max_joint_delta_rad_per_frame": 0.004,
+    "target_smoothing_time_s": 0.18
+  }
+}

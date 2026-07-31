@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot name="only_mobile">
+  <link name="base_mobile">
+    <inertial>
+      <origin xyz="-0.029734 4.7404E-06 -0.49328" rpy="0 0 0"/>
+      <mass value="770.04"/>
+      <inertia ixx="44.031" ixy="-0.0029331" ixz="-4.071E-10" iyy="144.4" iyz="1.043E-05" izz="134.59"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159265359 0 0"/>
+      <geometry>
+        <mesh filename="../meshes/base_mobile.STL"/>
+      </geometry>
+      <material name="mobile_material_0">
+        <color rgba="0.79216 0.81961 0.93333 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159265359 0 0"/>
+      <geometry>
+        <mesh filename="../meshes/base_mobile.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Kept byte-for-byte equivalent in properties to the latest wheel URDFs. -->
+  <link name="front_left_wheel"><inertial><origin xyz="0 0 0"/><mass value="20"/><inertia ixx="0.776" ixy="0" ixz="0" iyy="0.776" iyz="0" izz="1.444"/></inertial><visual><geometry><cylinder radius="0.38" length="0.18"/></geometry><material name="wheel_black"><color rgba="0.08 0.08 0.08 1"/></material></visual><collision><geometry><cylinder radius="0.38" length="0.18"/></geometry></collision></link>
+  <link name="front_right_wheel"><inertial><origin xyz="0 0 0"/><mass value="20"/><inertia ixx="0.776" ixy="0" ixz="0" iyy="0.776" iyz="0" izz="1.444"/></inertial><visual><geometry><cylinder radius="0.38" length="0.18"/></geometry><material name="wheel_black"/></visual><collision><geometry><cylinder radius="0.38" length="0.18"/></geometry></collision></link>
+  <link name="rear_left_wheel"><inertial><origin xyz="0 0 0"/><mass value="20"/><inertia ixx="0.776" ixy="0" ixz="0" iyy="0.776" iyz="0" izz="1.444"/></inertial><visual><geometry><cylinder radius="0.38" length="0.18"/></geometry><material name="wheel_black"/></visual><collision><geometry><cylinder radius="0.38" length="0.18"/></geometry></collision></link>
+  <link name="rear_right_wheel"><inertial><origin xyz="0 0 0"/><mass value="20"/><inertia ixx="0.776" ixy="0" ixz="0" iyy="0.776" iyz="0" izz="1.444"/></inertial><visual><geometry><cylinder radius="0.38" length="0.18"/></geometry><material name="wheel_black"/></visual><collision><geometry><cylinder radius="0.38" length="0.18"/></geometry></collision></link>
+
+  <joint name="front_left_wheel_joint" type="continuous"><origin xyz="-1.30 -0.68 1.14"/><parent link="base_mobile"/><child link="front_left_wheel"/><axis xyz="0 0 1"/><limit effort="4000" velocity="20"/><dynamics damping="0.1" friction="0.01"/></joint>
+  <joint name="front_right_wheel_joint" type="continuous"><origin xyz="-1.30 -0.68 -1.14"/><parent link="base_mobile"/><child link="front_right_wheel"/><axis xyz="0 0 1"/><limit effort="4000" velocity="20"/><dynamics damping="0.1" friction="0.01"/></joint>
+  <joint name="rear_left_wheel_joint" type="continuous"><origin xyz="1.30 -0.68 1.14"/><parent link="base_mobile"/><child link="rear_left_wheel"/><axis xyz="0 0 1"/><limit effort="4000" velocity="20"/><dynamics damping="0.1" friction="0.01"/></joint>
+  <joint name="rear_right_wheel_joint" type="continuous"><origin xyz="1.30 -0.68 -1.14"/><parent link="base_mobile"/><child link="rear_right_wheel"/><axis xyz="0 0 1"/><limit effort="4000" velocity="20"/><dynamics damping="0.1" friction="0.01"/></joint>
+</robot>
