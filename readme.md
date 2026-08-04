@@ -38,7 +38,7 @@ uv --version
 프로젝트 디렉터리로 이동합니다.
 
 ```bash
-cd /home/lflame/Desktop/isaac_bucket_robot
+cd isaac_bucket_robot
 ```
 
 `pyproject.toml`과 `uv.lock`을 기준으로 Python 3.11 가상환경 및 의존성을 설치합니다.
@@ -224,7 +224,7 @@ pwd
 출력은 다음 프로젝트 루트여야 합니다.
 
 ```text
-/home/lflame/Desktop/isaac_bucket_robot
+isaac_bucket_robot
 ```
 
 ### 첫 실행이 오래 걸리는 경우
